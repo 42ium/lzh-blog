@@ -4,7 +4,7 @@ date: 2024-01-10T10:00:00+08:00
 draft: false
 category: "UI/UX Design"
 tags: ["设计系统", "界面"]
-cover: "/images/project-cover.jpg"
+cover: "/images/project-cover1.jpg"
 ---
 
 一个为深空探索任务设计的控制界面系统。

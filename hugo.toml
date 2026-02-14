@@ -1,10 +1,10 @@
-baseURL = 'https://your-domain.com'
+baseURL = 'https://luzihang.netlify.app/'
 languageCode = 'zh-CN'
-title = 'Your Name'
-theme = 'space-jazz'
+title = 'Lu Zihang'
+
 
 [params]
-  author = "Your Name"
+  author = "Lu Zihang"
   description = "太空歌剧与爵士乐的交汇点"
 
   # 主题设置
@@ -19,7 +19,7 @@ theme = 'space-jazz'
   # 社交链接
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/yourname"
+    url = "https://github.com/42ium"
 
   [[params.socialIcons]]
     name = "twitter"
@@ -27,7 +27,7 @@ theme = 'space-jazz'
 
   [[params.socialIcons]]
     name = "email"
-    url = "mailto:your@email.com"
+    url = "luzihang1412@outlook.com"
 
 [menu]
   [[menu.main]]
