@@ -14,9 +14,9 @@
     <p class="section-subtitle">Selected Work</p>
   </div>
 
-  <div class="magazine-grid featured-first">
-    {{ range $i, $e := first 3 (where .Site.RegularPages "Type" "projects") }}
-    <article class="post-card project-card{{ if eq $i 0 }} featured{{ end }}">>
+   <div class="magazine-grid">
+    {{ range first 3 (where .Site.RegularPages "Type" "projects") }}
+    <article class="post-card project-card">
       {{ if .Params.cover }}
       <div class="card-image">
         <img src="{{ .Params.cover }}" alt="{{ .Title }}">
