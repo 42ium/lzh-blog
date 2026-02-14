@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<article>
+  <header class="article-header">
+    <h1 class="article-title">{{ .Title }}</h1>
+    <div class="article-meta">
+      {{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read
+    </div>
+  </header>
+
+  {{ if .Params.cover }}
+  <div style="max-width: 1000px; margin: 0 auto 3rem; border-radius: 4px; overflow: hidden;">
+    <img src="{{ .Params.cover }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+  </div>
+  {{ end }}
+
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Params.tags }}
+  <div style="max-width: 680px; margin: 4rem auto 0; padding-top: 2rem; border-top: 1px solid var(--stardust);">
+    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--deep-void); margin-bottom: 0.5rem;">TAGS</div>
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      {{ range .Params.tags }}
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ice-blue); background: var(--ice-blue-dim); padding: 0.25rem 0.75rem; border-radius: 3px;">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</article>
+
+{{ end }}

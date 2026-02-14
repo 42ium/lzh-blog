@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<div class="main-content" style="padding-top: 120px;">
+  <div class="section-header">
+    <h1 class="section-title">{{ .Title }}</h1>
+    {{ if .Content }}
+    <div style="max-width: 600px; margin-top: 1rem; color: var(--asteroid-grey);">
+      {{ .Content }}
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="magazine-grid">
+    {{ range .Pages }}
+    <article class="post-card {{ if eq .Type "projects" }}project-card{{ end }}">
+      {{ if .Params.cover }}
+      <div class="card-image">
+        <img src="{{ .Params.cover }}" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+      <div class="card-content">
+        <span class="card-meta">
+          {{ if eq .Type "projects" }}{{ .Params.category }}{{ else }}{{ .Date.Format "Jan 02, 2006" }}{{ end }}
+        </span>
+        <h3 class="card-title">{{ .Title }}</h3>
+        <p class="card-excerpt">{{ .Summary }}</p>
+        <div class="card-footer">
+          <span class="card-tag">{{ range .Params.tags }}{{ . }}{{ end }}</span>
+          <span>{{ if eq .Type "projects" }}View →{{ else }}{{ .ReadingTime }} min{{ end }}</span>
+        </div>
+      </div>
+      <a href="{{ .RelPermalink }}" class="card-link" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2;"></a>
+    </article>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

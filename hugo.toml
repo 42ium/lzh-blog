@@ -1,0 +1,55 @@
+baseURL = 'https://your-domain.com'
+languageCode = 'zh-CN'
+title = 'Your Name'
+theme = 'space-jazz'
+
+[params]
+  author = "Your Name"
+  description = "太空歌剧与爵士乐的交汇点"
+
+  # 主题设置
+  defaultTheme = "dark"
+  disableThemeToggle = true
+
+  # 首页设置
+  [params.homeInfoParams]
+    Title = "Stellar Notes"
+    Content = "在星际间漫游的文字与影像"
+
+  # 社交链接
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/yourname"
+
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/yourname"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:your@email.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Writing"
+    url = "/posts/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+
+[markup]
+  [markup.highlight]
+    style = 'dracula'
+    lineNos = true
+    codeFences = true
